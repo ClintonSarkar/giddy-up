@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://1r6dd773jtpf"]
+
+[ext_resource type="Script" path="res://scripts/startUp.gd" id="1_rvvx7"]
+[ext_resource type="LabelSettings" uid="uid://br7h0at7e5h63" path="res://resources/titleText.tres" id="2_86x25"]
+[ext_resource type="LabelSettings" uid="uid://bs1dhs2spmuxn" path="res://resources/uiText.tres" id="2_k2u7m"]
+[ext_resource type="FontFile" uid="uid://dpfgohxmhfgj1" path="res://assets/Saddlebag Black.ttf" id="3_xvc85"]
+
+[node name="startUp" type="Node2D"]
+script = ExtResource("1_rvvx7")
+
+[node name="bg" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="title" type="Label" parent="."]
+offset_left = 656.0
+offset_top = 130.0
+offset_right = 1265.0
+offset_bottom = 259.0
+text = "Giddy-Up"
+label_settings = ExtResource("2_86x25")
+
+[node name="start" type="Button" parent="."]
+offset_left = 864.0
+offset_top = 380.0
+offset_right = 1057.0
+offset_bottom = 441.0
+theme_override_fonts/font = ExtResource("3_xvc85")
+theme_override_font_sizes/font_size = 52
+text = "START"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 888.0
+offset_top = 520.0
+offset_right = 1032.0
+offset_bottom = 581.0
+theme_override_fonts/font = ExtResource("3_xvc85")
+theme_override_font_sizes/font_size = 52
+text = "QUIT
+"
+
+[node name="hint" type="Label" parent="."]
+offset_left = 208.0
+offset_top = 720.0
+offset_right = 1713.0
+offset_bottom = 985.0
+text = "How to play:
+
+- Shoot(type) the target before you run out of bullets.
+- If you miss, you will get hurt.
+- Press ESC to restart."
+label_settings = ExtResource("2_k2u7m")
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

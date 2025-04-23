@@ -1,6 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
 
+# IDE specific ignores
+.idea/
+
 # Godot-specific ignores
 .import/
 export.cfg
@@ -8,6 +11,7 @@ export_credentials.cfg
 
 # Imported translations (automatically generated from CSV files)
 *.translation
+*.tmp
 
 # Mono-specific ignores
 .mono/
